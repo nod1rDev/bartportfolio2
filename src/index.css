@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "DN Sans";
+  src: url("/fonts/DN-Sans-Regular.woff2") format("woff2"),
+    url("/fonts/DN-Sans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DN Sans";
+  src: url("/fonts/DN-Sans-Bold.woff2") format("woff2"),
+    url("/fonts/DN-Sans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  @apply font-dn-sans;
+}
+
+#oq_nuqta {
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0);
+  }
+}
+
+/* Add to index.css */
+.containerr {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.containerr .hexagonArea {
+  display: flex;
+}
+
+.containerr .hexagonArea.lasta {
+  transform: translateY(-20px);
+}
+
+.containerr .hexagonArea .hexagon {
+  position: relative;
+  width: 85px;
+  height: 95px;
+  margin: 0 2px;
+
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: #282626;
+  --tw-bg-opacity: 10%;
+  opacity: 100%;
+
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional for glow effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.5s, border-color 0.3s, box-shadow 0.3s;
+}
+
+@media (min-width: 768px) {
+  .containerr .hexagonArea .hexagon {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    margin: 0 2px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #282626;
+    --tw-bg-opacity: 10%;
+    opacity: 100%;
+
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional for glow effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.5s, border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .containerr .hexagonArea.lasta {
+    transform: translateY(-25px);
+  }
+}
+.containerr .hexagonArea .hexagon:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 1); /* Enhanced glow effect on hover */
+  transform: scale(1.1);
+}
+
+.framer{
+  backdrop-filter: blur(42px);
+}
+
+
+/* Scrollbar uchun o'zgartirishlar */
+::-webkit-scrollbar {
+  width: 6px; /* Scrollbar eni */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2d2d2d; /* Scrollbar rangini qora qilamiz */
+  border-radius: 3px; /* Yumaloq chetlar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #444; /* Hover effekti uchun ochroq qora */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Scrollbar tag fonini shaffof qilamiz */
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.glowing-effect {
+  animation: glow 4s infinite;
+}
+
+/* Mobil moslashuv */
+@media (max-width: 768px) {
+  .glowing-effect {
+    width: 70px; /* Mobil uchun kichikroq tugma */
+    height: 70px;
+    animation: glow 4.5s infinite; /* Sekinroq animatsiya */
+  }
+}
