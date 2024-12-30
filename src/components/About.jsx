@@ -22,8 +22,8 @@ const AboutPage = () => {
       <div className="bg-[#00A7E1] py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center text-black">
-            <h1 className="text-5xl font-bold mb-6">
-              Shakhzod 'Bart' Tursunov
+            <h1 className="text-5xl relative font-bold mb-6">
+              Shakhzod Tursunov <span className="text-white text-[20px] absolute top-[-5px]">Bart</span>
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
               A visionary leader in AI solutions and cross-cultural business
