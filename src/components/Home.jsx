@@ -147,10 +147,10 @@ function Home() {
               </div>
               <div className="hexagon group">
                 <a
-                  href="https://apexbart.xyz"
+                  href="https://apexbart.com"
                   className="flex flex-col items-center"
                 >
-                  <img src="/logo.svg" className="w-[48px] h-[48px]" alt="" />
+                  <img src="/logo.png" className="w-[48px] h-[48px]" alt="" />
                   <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     ApexBart
                   </div>
@@ -204,7 +204,7 @@ function Home() {
           </span>
         </div>
         <div className="flex-0 min-h-[36%] border rounded-[23px] p-6 bg-[#101010] border-[#101010] overflow-y-auto">
-          <h3 className="text-[1.4rem] text-center font-bold text-[#FFFFFF] mb-4">
+          {/* <h3 className="text-[1.4rem] text-center font-bold text-[#FFFFFF] mb-4">
             Latest projects
           </h3>
 
@@ -237,7 +237,7 @@ function Home() {
                 </div>
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
