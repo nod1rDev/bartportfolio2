@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Spline from "@splinetool/react-spline";
 import { projects, skills } from "./utils";
 import { Link } from "react-router-dom";
-
+import ChatBot from "./ChatBot";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -286,7 +286,7 @@ function Home() {
         </div>
       )}
 
-    
+      <ChatBot />
     </div>
   );
 }
