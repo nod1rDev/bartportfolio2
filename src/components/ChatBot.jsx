@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import  { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 
@@ -23,56 +23,60 @@ const ChatBot = () => {
 
   const handleSend = async () => {
     if (!input.trim()) return;
-
+  
     const userMessage = { sender: "user", text: input };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setLoading(true);
-
+  
     try {
-      const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
-
-     
-      const response = await fetch(
-        "https://api.openai.com/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${API_KEY}`,
-          },
-          body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages: [
-              { role: "system", content: "You are a helpful assistant." },
-              { role: "user", content: input },
-            ],
-            max_tokens: 150,
-            temperature: 0.7,
-          }),
-        }
-      );
-
+      const API_KEY = import.meta.env.VITE_OPENAI_API_KEY || "your_openai_api_key_here";
+  
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [
+            { role: "system", content: "You are a helpful assistant." },
+            { role: "user", content: input },
+          ],
+        }),
+      });
+  
       if (!response.ok) {
-        throw new Error("Server error occurred.");
+        const errorDetails = await response.json();
+        console.error("Response Error Details:", errorDetails);
+        throw new Error(`Server error: ${response.statusText}`);
       }
-
+  
       const data = await response.json();
       const botMessage = {
         sender: "bot",
-        text: data.choices[0].message.content.trim(),
+        text:
+          data.choices?.[0]?.message?.content?.trim() ||
+          "No response from assistant.",
       };
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error("Error:", error);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "An error occurred. Please try again later." },
+        {
+          sender: "bot",
+          text: "An error occurred. Please try again later.",
+        },
       ]);
     } finally {
       setLoading(false);
     }
   };
+  
+  
+  
 
   return (
     <div className="fixed bottom-4 right-4 md:bottom-8 md:right-10 z-50">

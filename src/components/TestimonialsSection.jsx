@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Star } from "lucide-react";
 import { testimonials } from "./data/testimonials";
 
@@ -19,7 +19,7 @@ export const TestimonialsSection = () => (
                 <Star key={i} className="w-5 h-5 text-[#00A7E1] fill-current" />
               ))}
             </div>
-            <p className="text-white mb-4 italic">"{testimonial.text}"</p>
+            <p className="text-white mb-4 italic">{testimonial.text}</p>
             <div className="text-sm">
               <p className="font-semibold text-white">{testimonial.name}</p>
               <p className="text-white/60">{testimonial.role}</p>

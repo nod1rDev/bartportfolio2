@@ -100,6 +100,42 @@ function Home() {
         />
       </div>
       <div className="flex flex-col w-full md:w-1/4 gap-4 justify-between">
+        <div className="flex-0 min-h-[36%] border rounded-[23px] p-6 bg-[#101010] border-[#101010] overflow-y-auto">
+          <h3 className="text-[1.4rem] text-center font-bold text-[#FFFFFF] mb-4">
+            Latest projects
+          </h3>
+
+          <div className="flex flex-col gap-3">
+            {projects.map((e, i) => (
+              <a key={i} href={e.link}>
+                <div className="flex gap-3 relative group cursor-pointer rounded-[12px] p-[8px] hover:bg-[#2e2e2e] transition-all duration-700 items-center">
+                  <div className="absolute top-5 hidden group-hover:block left-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="36"
+                      height="36"
+                      fill="rgba(246,241,241,1)"
+                    >
+                      <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
+                    </svg>
+                  </div>
+                  <img
+                    src={e.image}
+                    className="w-[56px] group-hover:bg-black group-hover:bg-opacity-[30%] rounded-[12px] h-[56px]"
+                    alt=""
+                  />
+                  <div className="flex flex-col ">
+                    <span className="font-bold">{e.title}</span>
+                    <span className="text-[#FFFFFFB3] text-[0.8rem]">
+                      {e.description}
+                    </span>{" "}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
         <div
           id="logos"
           className="flex-0 min-h-[60%]  md:pb-0 flex flex-col border rounded-[23px] bg-[#101010] border-[#101010] items-center justify-center"
@@ -202,42 +238,6 @@ function Home() {
             Let’s discuss how we can work together to create impactful solutions
             tailored to your needs.
           </span>
-        </div>
-        <div className="flex-0 min-h-[36%] border rounded-[23px] p-6 bg-[#101010] border-[#101010] overflow-y-auto">
-          {/* <h3 className="text-[1.4rem] text-center font-bold text-[#FFFFFF] mb-4">
-            Latest projects
-          </h3>
-
-          <div className="flex flex-col gap-3">
-            {projects.map((e, i) => (
-              <a key={i} href={e.link}>
-                <div className="flex gap-3 relative group cursor-pointer rounded-[12px] p-[8px] hover:bg-[#2e2e2e] transition-all duration-700 items-center">
-                  <div className="absolute top-5 hidden group-hover:block left-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="36"
-                      height="36"
-                      fill="rgba(246,241,241,1)"
-                    >
-                      <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
-                    </svg>
-                  </div>
-                  <img
-                    src={e.image}
-                    className="w-[56px] group-hover:bg-black group-hover:bg-opacity-[30%] rounded-[12px] h-[56px]"
-                    alt=""
-                  />
-                  <div className="flex flex-col ">
-                    <span className="font-bold">{e.title}</span>
-                    <span className="text-[#FFFFFFB3] text-[0.8rem]">
-                      {e.description}
-                    </span>{" "}
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div> */}
         </div>
       </div>
 

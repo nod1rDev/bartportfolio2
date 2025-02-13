@@ -1,46 +1,43 @@
 export const skills = [
-    "AI Integration",
-    "Voice Data",
-    "Chatbots",
-    "Data Collection",
-    "ML",
-    "Business Management",
-    "Development",
-  ];
+  "AI Integration",
+  "Voice Data",
+  "Chatbots",
+  "Data Collection",
+  "ML",
+  "Business Management",
+  "Development",
+];
 
- export const projects = [
-    {
-      title: "Voice Data Collection",
-      description: `High-quality multilingual datasets that enhance AI training efficiency.`,
-      image: "/img.webp",
-      link: "https://free-war-fb9.notion.site/Voice-Data-Collection164376631960805580a5e804c7fa6d27?pvs=4",
-    },
-    {
-      title: "Custom Chatbots",
-      description: `Conversational AI solutions tailored for businesses.`,
-      image:
-        "https://www.plego.com/wp-content/uploads/2021/11/chatbot3-1024x652.jpg",
-      link: "https://free-war-fb9.notion.site/Custom-Chatbots-16437663196080d4b8c8e6041d393610?pvs=4",
-    },
-    {
-      title: "Automation Solutions",
-      description: `End-to-end platforms for streamlining operations`,
-      image:
-        "https://media.istockphoto.com/id/1367967285/photo/automation-software-technology-process-system-business-concept.jpg?s=612x612&w=0&k=20&c=VnRZHYgIfInFhaShiStMroW7PnVyvAC4C9SodjBf4ns=",
-      link: "https://free-war-fb9.notion.site/Automation-Solutions1643766319608042ad1ad2f73f880e18?pvs=4 ",
-    },
-    {
-      title: "Website Development",
-      description: `Modern, responsive websites to establish your online presence.`,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRl_6AuG1TxzQdGmZSN4pF02iLepIl6-4ucQ&s",
-      link: "https://free-war-fb9.notion.site/Website-Development16437663196080059302c01f3c9fe87f?pvs=4",
-    },
-    {
-      title: "Social Media Growth",
-      description: `Strategies and tools to boost engagement andvisibility`,
-      image:
-        "https://recurpost.com/wp-content/uploads/2022/05/good-thing-about-social-media-1024x576.png",
-      link: "https://free-war-fb9.notion.site/Automation-Solutions1643766319608042ad1ad2f73f880e18?pvs=4 ",
-    },
-  ];
+export const projects = [
+  {
+    title: "Transform Data Into Decisions",
+    description: `Harness the power of artificial intelligence to gain actionable insights and make data-driven decisions.`,
+    image: "/ai-hero.webp",
+    link: "https://www.apexbart.com/ai-powered",
+  },
+  {
+    title: "Tailored Software Solutions",
+    description: `Custom software solutions designed to address your unique business challenges and streamline operations.`,
+    image: "/software-hero.webp",
+    link: "https://www.apexbart.com/software",
+  },
+  {
+    title: "Transform Your Business With Cloud Solutions",
+    description: `Accelerate your digital transformation with our comprehensive cloud migration and management services.`,
+    image: "/cloud-migration3.webp",
+    link: "https://www.apexbart.com/cloud ",
+  },
+  {
+    title: "Secure Your Digital Future",
+    description: `Protect your digital assets with our state-of-the-art security measures and proactive threat management.`,
+    image: "/security-hero.webp",
+    link: "https://www.apexbart.com/cybersecurity",
+  },
+
+  {
+    title: "Connect Your Physical & Digital Worlds",
+    description: `Unlock new efficiencies and create innovative products and services with our IoT integration solutions.`,
+    image: "/iot-hero.webp",
+    link: "https://www.apexbart.com/integration",
+  },
+];
